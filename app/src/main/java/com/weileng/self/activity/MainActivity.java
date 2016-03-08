@@ -15,6 +15,7 @@ import com.weileng.self.adapter.FragmentAdapter;
 /**
  * @author  lt
  * @time 2016/3/8
+ * @deprecate 主页
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
