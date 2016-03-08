@@ -12,6 +12,10 @@ import android.widget.Toast;
 import com.weileng.self.R;
 import com.weileng.self.adapter.FragmentAdapter;
 
+/**
+ * @author  lt
+ * @time 2016/3/8
+ */
 public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     public static final int TAB_HOME = 0;
