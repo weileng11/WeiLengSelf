@@ -5,7 +5,9 @@ import android.os.Bundle;
 import com.weileng.self.R;
 
 /**
- * Created by lt on 2016/3/8.
+ * @author  lt
+ * @time 2016/3/8
+ * @deprecate 启动页面
  */
 public class LaunchActivity extends BaseActivity {
     @Override
