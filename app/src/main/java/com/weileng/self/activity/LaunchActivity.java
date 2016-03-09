@@ -1,6 +1,6 @@
 package com.weileng.self.activity;
 
-import android.os.Bundle;
+import android.view.View;
 
 import com.weileng.self.R;
 
@@ -11,21 +11,28 @@ import com.weileng.self.R;
  */
 public class LaunchActivity extends BaseActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void initParameter() {
         setContentView(R.layout.lauch_activity);
+    }
 
+    @Override
+    public void initView() {
         new Thread() {
             @Override
             public void run() {
                 super.run();
                 try {
                     Thread.sleep(3000);
-                    skipActivity(LaunchActivity.this,MainActivity.class);
+                    skipActivity(LaunchActivity.this,LoginActivity.class);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }.start();
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

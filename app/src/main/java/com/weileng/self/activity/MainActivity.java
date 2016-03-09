@@ -1,7 +1,5 @@
 package com.weileng.self.activity;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
@@ -17,8 +15,7 @@ import com.weileng.self.adapter.FragmentAdapter;
  * @time 2016/3/8
  * @deprecate 主页
  */
-public class MainActivity extends BaseActivity implements View.OnClickListener{
-
+public class MainActivity extends BaseActivity{
     public static final int TAB_HOME = 0;
     public static final int TAB_CATAGORY = 1;
     public static final int TAB_CAR = 2;
@@ -30,14 +27,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             main_tab_buy, main_tab_more;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
+    public void initView() {
+        initView1();
         addListener();
     }
 
-    private void initView() {
+    @Override
+    public void initParameter() {
+        setContentView(R.layout.activity_main);
+    }
+
+    private void initView1() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         main_tab_home = (RadioButton) findViewById(R.id.main_tab_home);
         main_tab_catagory = (RadioButton) findViewById(R.id.main_tab_catagory);
@@ -123,7 +123,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
             if (backKeyCount == 0) {
                 String  tip = "再按一次退出应用";
-                Toast.makeText(this, tip, 0).show();
+                Toast.makeText(this, tip, Toast.LENGTH_SHORT).show();
                 backKeyCount++;
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {

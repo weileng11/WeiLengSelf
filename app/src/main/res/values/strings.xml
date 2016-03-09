@@ -12,4 +12,6 @@
     <string name="btn_cancel">取 消</string>
     <string name="btn_ok">确 定</string>
     <string name="cart_item_hint">购物车还是空的,快去选购吧~ !</string>
+
+    <string name="network_isnot_available">网络不可用</string>
 </resources>

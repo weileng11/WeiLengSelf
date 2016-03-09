@@ -5,18 +5,35 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Toast;
 
 /**
  * Created by Administrator on 2016/3/8.
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity  implements
+        View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initParameter();
+        initView();
 
     }
 
+    public abstract void initParameter();
+
+    public abstract void initView();
+
+    /**
+     * set views click
+     * @param view
+     */
+    protected void setOnClick(View...view){
+        for(int i=0;i<view.length;i++){
+            view[i].setOnClickListener(BaseActivity.this);
+        }
+    }
 
     /**
      * 返回键
