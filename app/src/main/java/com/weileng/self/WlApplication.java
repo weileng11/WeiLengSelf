@@ -20,4 +20,6 @@ public class WlApplication extends Application{
     public WlApplication getInstance(){
         return  instance;
     }
+
+    //
 }

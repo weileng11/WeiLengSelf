@@ -3,7 +3,8 @@
     android:id="@+id/empty_cart_view"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#ffefebe7" >
+    android:background="#ffefebe7"
+    >
 
     <com.weileng.self.widget.TopBarLayout
         android:id="@+id/topbar"
@@ -16,5 +17,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/topbar"
         android:text="买买car"/>
+
+    <Button
+        android:id="@+id/btn_db_Ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="数据库部分"
+        />
 
 </RelativeLayout>

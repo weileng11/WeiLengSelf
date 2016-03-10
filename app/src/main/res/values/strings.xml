@@ -5,7 +5,7 @@
     <string name="ActivityMainTitle">京东商城</string>
     <string name="main_navigation_home">首页</string>
     <string name="main_navigation_catagory">分类</string>
-    <string name="main_navigation_car">购物车</string>
+    <string name="main_navigation_car">数据库</string>
     <string name="main_code_buy">我的京东</string>
     <string name="main_navigation_more">更多</string>
     <string name="app_close">关闭应用程序</string>

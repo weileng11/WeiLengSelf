@@ -8,6 +8,14 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.j256.ormlite.android.apptools.OpenHelperManager;
+import com.j256.ormlite.dao.Dao;
+import com.weileng.self.db.BaseDao;
+import com.weileng.self.db.DatabaseHelper;
+import com.weileng.self.db.IOperateType;
+
+import java.sql.SQLException;
+
 /**
  * Created by Administrator on 2016/3/8.
  */
@@ -24,6 +32,36 @@ public abstract class BaseActivity extends AppCompatActivity  implements
     public abstract void initParameter();
 
     public abstract void initView();
+
+    /**
+     * 得到操作数据库的dao
+     * @param clazz
+     * @return
+     */
+    public/*protected*/ <T extends IOperateType> BaseDao<T> getDao(final Class<T> clazz){
+        BaseDao<T> baseDao=new BaseDao<T>() {
+
+            @Override
+            public Dao<T, Integer> getDao() throws SQLException {
+                // TODO Auto-generated method stub
+                return getHelper().getDao(clazz);
+            }
+        };
+        return baseDao;
+    }
+    private DatabaseHelper dataHelper = null;
+    private DatabaseHelper getHelper() {
+        if (dataHelper == null) {
+            dataHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
+        }
+        return dataHelper;
+    }
+    private void replaceHelper(){
+        if(dataHelper!=null){
+            OpenHelperManager.releaseHelper();
+            dataHelper=null;
+        }
+    }
 
     /**
      * set views click

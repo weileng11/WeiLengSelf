@@ -26,4 +26,6 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.github.bumptech.glide:volley-integration:1.4.0'
     compile 'com.google.code.gson:gson:2.6.1'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.j256.ormlite:ormlite-core:4.48'
 }
