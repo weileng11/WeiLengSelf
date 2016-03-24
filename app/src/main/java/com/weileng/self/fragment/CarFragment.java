@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.weileng.self.R;
 import com.weileng.self.activity.DbWlActivity;
+import com.weileng.self.activity.TestReceiveActivity;
 import com.weileng.self.widget.TopBarLayout;
 
 public class CarFragment extends Fragment{
@@ -27,7 +28,16 @@ public class CarFragment extends Fragment{
 		mDbBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent=new Intent(getActivity(), DbWlActivity.class);
+				Intent intent = new Intent(getActivity(), DbWlActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		Button mRecevice=(Button)mView.findViewById(R.id.btn_recevice);
+		mRecevice.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(getActivity(), TestReceiveActivity.class);
 				startActivity(intent);
 			}
 		});

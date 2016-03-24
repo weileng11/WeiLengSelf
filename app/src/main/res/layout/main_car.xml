@@ -26,4 +26,12 @@
         android:text="数据库部分"
         />
 
+    <Button
+        android:id="@+id/btn_recevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_db_Ok"
+        android:text="广播测试"
+        />
+
 </RelativeLayout>

@@ -23,6 +23,18 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
+            android:name=".activity.TestReceiveActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+       <!--
+        静态注册广播,priority是指优先级
+        <receiver android:name=".receive.WeilengRecevice">
+            <intent-filter android:priority="1000">
+                <action android:name="com.weileng.self"/>
+            </intent-filter>
+        </receiver>-->
+        <activity
             android:name=".activity.LaunchActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
