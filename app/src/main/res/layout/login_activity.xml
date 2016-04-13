@@ -157,6 +157,30 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
+            <Button
+                android:id="@+id/btn_shape"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/button_selector"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layerType="software"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/yuan"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="7"
+                android:textColor="@android:color/white" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
