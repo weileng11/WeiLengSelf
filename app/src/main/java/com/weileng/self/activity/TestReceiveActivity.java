@@ -49,7 +49,7 @@ public class TestReceiveActivity extends BaseActivity {
 
         Intent intent=new Intent("com.pzf.mybroadcast");//清单文件中配置的
         intent.putExtra("msg", "ni hao ");
-        intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+        intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);  //android 4.0以后必须加入这个获取自身的包名
         sendOrderedBroadcast(intent, null);//receiverPermission:是自定义个权限
     }
 
