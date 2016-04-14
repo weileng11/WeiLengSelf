@@ -45,6 +45,39 @@
         </activity>
     </application>
 
+    <receiver
+        android:name="com.weileng.self.receive.MyOrderBroadcastReciver"
+        >
+        <intent-filter
+            android:priority="1000"
+            >
+            <action android:name="com.pzf.mybroadcast"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+    </receiver>
+    <receiver
+        android:name="com.weileng.self.receive..MyOrderBroadcastReciverThird"
+        >
+        <intent-filter
+            android:priority="998"
+            >
+            <action android:name="com.pzf.mybroadcast"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+    </receiver>
+    <receiver
+        android:name="com.weileng.self.receive..MyOrderBroadcastReciverTwo"
+        >
+        <intent-filter
+            android:priority="999"
+            >
+            <action android:name="com.pzf.mybroadcast"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+
+    </receiver>
+
+
     <!-- mk -->
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.SEND_SMS"/>
